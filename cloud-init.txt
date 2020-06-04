@@ -1,0 +1,26 @@
+#cloud-config
+
+users:
+  - name: kiran-joshi
+    ssh-authorized-keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDIu6BcKjyrbXh+fW0ZNqq5C1PkpJooacqt0Jh+kGeSPxYapy7iiTrpOvoGhJjvZhEs3z65wWw/8LboDPbnXnnU0J5rQg6IwEnEWYC+MfpeqhIl8uVxthvHTkXJc1ltdl/emxIqxU0F+QsOMrSEpbmRulYDsRVlY8IB3/gN5edsiHs3YO053nKoukl3MYD33hXT6ahVhr2267mPfFYJjFNp28wMY/4wOmklsXgN9oP873RQk03UTT2XhyNoxhORCD0IKwPGCSTGZiBLeaf2U2k2YJ7wYkNEvMgv3O/QA60JunvEryvn656dETiqXy7iYIZkMOBw9HTIj+1ccobqfGHt kiran.joshi@jisc.ac.uk
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    groups: sudo
+    shell: /bin/bash
+
+  - name: michael-webb
+    ssh-authorized-keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCxzDv+F9FRobyPOF1ox4iD64RbHEv/sX7XZVa51ryyagTcJEMD5mmMhCyR2kSzf57sNavNZ+8aJWKRGb5Dx+ppNDFpyOuy1CtIL0On27tMTVSCle2WmOGLQf+RHUK+5gd2/gfgI9Rrj5ldVIu2L7qA8f7ve2i9SFy+jHPkIsMzDu5mPYL1mSxAn+f3BDAgzpfPCbHB8zZZFGR36TlgcPx+PIkQ0MTIZR8vHGZLsJHhMMCibq4G2/RViW9wyAFzuPPy9xHIYd/RD2Z7cpSaXueCNegOXXDEuRc1RUCi0BKYtEDbtsHhZUt7x5CKtTIqvMooi7/NM59+WpdUESHRgz7x michael.webb@JM7230.local
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    groups: sudo
+    shell: /bin/bash
+
+  - name: nathan-sainsbury
+    ssh-authorized-keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDChyB44n7EiS7au/tTQrzJfhhO+xlyW6JHg08JBY2iQfHsOR7ZKxhJmo1MLs8f92KtIJpCQ5c6MbW4glRCBnVyaIa0Uv9yvvta0BZwcsfFhFAhgzcxVYtyEdS1rizZN2r4696xZUzbYMfaiRhKKcP+vTo7o9Xh5301eDOc6CiM+fdXM2WARikLdJm2Vg84FdtLyLMbRWtCFj0YMd2Sohho4N3yVyqGS2+VjCYmEtciZCtywlhw3ULFBJoCFS05XaCJx6qZQSWWPfiChiOwUXchBppzdBo24zwZ8C5Y01DwJmprEzn1PoMTNGtyY8yWzGiiEa26fXPf4VJCJeIvZuA7 nathan.sainsbury@jm6930.corp.jisc.ac.uk
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    groups: sudo
+    shell: /bin/bash
+     
+runcmd:
+  - sudo deluser --remove-home ubuntu
